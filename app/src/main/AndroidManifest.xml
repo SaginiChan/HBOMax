@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.hbo2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity
+            android:name=".SplashActivity"
+            android:noHistory="true"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".OnBoardingActivity" />
+        <activity android:name=".OnBoardingActivity2" />
+        <activity android:name=".OnBoardingActivity3" />
+        <activity android:name=".SignnUpActivity" />
+        <activity android:name=".FirstPage" />
+        <activity android:name=".HboActivity" />
+        <activity android:name=".DcActivity" />
+        <activity android:name=".CwActivity" />
+        <activity android:name=".GameOfThrones" />
+        <activity android:name=".BatgirlActivity" />
+        <activity android:name=".SupergirlActivity" />
+        <activity android:name=".ArrowActivity" />
+        <activity android:name=".TheFlashActivity" />
+        <activity android:name=".OriginalsActivity" />
+        <activity android:name=".The100Activity" />
+        <activity android:name=".RiverdaleActivity" />
+        <activity android:name=".VampireDiariesActivity" />
+        <activity android:name=".TheWalkingDeadActivity" />
+        <activity android:name=".SupernaturalActivity" />
+        <activity android:name=".BallersActivity" />
+        <activity android:name=".WatchmenActivity" />
+        <activity android:name=".TrueDetectiveActivity" />
+        <activity android:name=".VeepActivity" />
+        <activity android:name=".SuccessionActivity" />
+        <activity android:name=".BarryActivity" />
+        <activity android:name=".WestworldActivity" />
+        <activity android:name=".BiglittleliesActivity" />
+        <activity android:name=".EuphoriaActivity" />
+        <activity android:name=".HarleyquinnActivity" />
+        <activity android:name=".PennysworthActivity" />
+        <activity android:name=".SwampThingActivity" />
+        <activity android:name=".TitansActivity" />
+        <activity android:name=".DoomPatrolActivity" />
+        <activity android:name=".LegendsActivity" />
+    </application>
+
+</manifest>

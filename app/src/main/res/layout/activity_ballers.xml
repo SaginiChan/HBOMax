@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BallersActivity"
+    android:background="@drawable/background5"
+
+<WebView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:webview.loadUrl("http://cbseacademic.in/SQP_CLASSXII_2016_17.html")
+    webview.webViewClient = MyClient()
+
+    webview.setDownloadListener({ url, userAgent, contentDisposition, mimeType, contentLength ->
+    val request = DownloadManager.Request(Uri.parse(url))
+    request.setMimeType(mimeType)
+    request.addRequestHeader("cookie", CookieManager.getInstance().getCookie(url))
+    request.addRequestHeader("User-Agent", userAgent)
+    request.setDescription("Downloading file...")
+    request.setTitle(URLUtil.guessFileName(url, contentDisposition, mimeType))
+    request.allowScanningByMediaScanner()
+    request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+    request.setDestinationInExternalFilesDir(this@MainActivity, Environment.DIRECTORY_DOWNLOADS, ".png")
+    val dm = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+    dm.enqueue(request)
+    Toast.makeText(applicationContext, "Downloading File", Toast.LENGTH_LONG).show()
+    })
+
+    />
